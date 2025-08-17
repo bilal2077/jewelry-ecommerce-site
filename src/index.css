@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Luxury Black & Gold Design System for Jewelry E-commerce
+All colors MUST be HSL. */
+
+@layer base {
+  :root {
+    /* Core black and gold luxury palette */
+    --background: 0 0% 3%;
+    --foreground: 45 100% 85%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 45 100% 90%;
+
+    --popover: 0 0% 4%;
+    --popover-foreground: 45 100% 90%;
+
+    /* Primary gold accent - brighter for dark mode */
+    --primary: 51 100% 50%;
+    --primary-foreground: 0 0% 5%;
+    --primary-glow: 51 100% 60%;
+
+    /* Secondary deep gold */
+    --secondary: 38 60% 25%;
+    --secondary-foreground: 51 100% 85%;
+
+    /* Muted charcoal tones */
+    --muted: 0 0% 12%;
+    --muted-foreground: 45 20% 60%;
+
+    /* Accent warm gold */
+    --accent: 51 90% 55%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 45 100% 95%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 10%;
+    --ring: 51 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Luxury gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-luxury: linear-gradient(135deg, hsl(51 100% 45%), hsl(51 100% 55%), hsl(51 90% 50%));
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 3%), hsl(0 0% 6%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 6%), hsl(0 0% 8%));
+
+    /* Luxury shadows */
+    --shadow-luxury: 0 25px 50px -12px hsl(51 100% 50% / 0.3);
+    --shadow-gold-glow: 0 0 40px hsl(51 100% 50% / 0.4);
+    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
+
+    /* Animation transitions */
+    --transition-luxury: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: all 0.3s ease;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode luxury colors - keep the same gold accents */
+    --background: 0 0% 2%;
+    --foreground: 45 100% 90%;
+
+    --card: 0 0% 4%;
+    --card-foreground: 45 100% 92%;
+
+    --popover: 0 0% 3%;
+    --popover-foreground: 45 100% 92%;
+
+    --primary: 51 100% 50%;
+    --primary-foreground: 0 0% 3%;
+    --primary-glow: 51 100% 60%;
+
+    --secondary: 38 60% 20%;
+    --secondary-foreground: 51 100% 90%;
+
+    --muted: 0 0% 8%;
+    --muted-foreground: 45 20% 65%;
+
+    --accent: 51 90% 60%;
+    --accent-foreground: 0 0% 3%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 45 100% 95%;
+
+    --border: 0 0% 12%;
+    --input: 0 0% 6%;
+    --ring: 51 100% 50%;
+
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-luxury: linear-gradient(135deg, hsl(51 100% 45%), hsl(51 100% 55%), hsl(51 90% 50%));
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 2%), hsl(0 0% 4%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 4%), hsl(0 0% 6%));
+
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 45 100% 90%;
+    --sidebar-primary: 51 100% 50%;
+    --sidebar-primary-foreground: 0 0% 3%;
+    --sidebar-accent: 0 0% 8%;
+    --sidebar-accent-foreground: 51 100% 90%;
+    --sidebar-border: 0 0% 12%;
+    --sidebar-ring: 51 100% 50%;
+  }
+
+  .light {
+    /* Light mode with warm tones */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+
+    --primary: 42 34% 52%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 42 34% 62%;
+
+    --secondary: 45 30% 90%;
+    --secondary-foreground: 0 0% 15%;
+
+    --muted: 45 10% 95%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 42 34% 45%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 75% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 45 20% 85%;
+    --input: 0 0% 96%;
+    --ring: 42 34% 52%;
+
+    /* Light mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-luxury: linear-gradient(135deg, hsl(42 34% 45%), hsl(42 34% 55%), hsl(42 34% 40%));
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 98%), hsl(0 0% 95%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(0 0% 98%));
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 15%;
+    --sidebar-primary: 42 34% 52%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 45 10% 95%;
+    --sidebar-accent-foreground: 0 0% 15%;
+    --sidebar-border: 45 20% 85%;
+    --sidebar-ring: 42 34% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    background: var(--gradient-dark);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer utilities {
+  /* Luxury component classes */
+  .luxury-button {
+    @apply bg-gradient-to-r from-primary to-primary-glow text-primary-foreground;
+    @apply hover:shadow-[var(--shadow-gold-glow)] transition-[var(--transition-luxury)];
+    @apply font-medium rounded-lg px-6 py-3;
+  }
+
+  .luxury-card {
+    @apply bg-card border border-border rounded-lg;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+    @apply transition-[var(--transition-luxury)];
+  }
+
+  .luxury-card:hover {
+    box-shadow: var(--shadow-luxury);
+    transform: translateY(-2px);
+  }
+
+  .gold-text {
+    @apply text-primary;
+  }
+
+  .gold-glow {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+  }
+
+  .luxury-input {
+    @apply bg-input border border-border text-foreground placeholder:text-muted-foreground;
+    @apply focus:ring-2 focus:ring-primary focus:border-primary;
+    @apply transition-[var(--transition-luxury)];
+  }
+
+  .hero-gradient {
+    background: var(--gradient-luxury);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--primary) / 0.2),
+      transparent
+    );
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .scale-hover {
+    @apply transition-transform duration-300;
+  }
+
+  .scale-hover:hover {
+    transform: scale(1.02);
+  }
+}
