@@ -18,17 +18,12 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        luxury: "luxury-button font-semibold tracking-wide",
-        luxuryOutline: "border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent transition-all duration-300",
-        gold: "bg-gradient-to-r from-primary to-primary-glow text-primary-foreground hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-all duration-300",
-        admin: "bg-gradient-to-r from-accent to-primary text-primary-foreground hover:shadow-[0_0_20px_hsl(var(--accent)/0.4)] font-medium",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",
-        hero: "h-14 px-10 py-4 text-lg",
       },
     },
     defaultVariants: {
